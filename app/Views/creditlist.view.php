@@ -45,7 +45,7 @@
         <?php } ?>
     </table>
     <button onclick="window.location.href='<?= ROOT_URL ?>/home'">&#127968; Go back home</button>
-    <button onclick="window.location.href='<?= ROOT_URL ?>/create'">&#10133; Create new credit</button>
+    <button onclick="window.location.href='<?= ROOT_URL ?>/createcredit'">&#10133; Create new credit</button>
 </div>
 
 <script src="public/js/app.js"></script>
