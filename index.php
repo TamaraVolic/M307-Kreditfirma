@@ -2,11 +2,11 @@
 require 'core/bootstrap.php';
 
 $routes = [
-	'/hallo/welt' => 'WelcomeController@index',
+	'/creditlist' => 'CreditListController@index',
 ];
 
 $db = [
-	'name'     => 'meinedatenbank',
+	'name'     => 'kredihay',
 	'username' => 'root',
 	'password' => '',
 ];
