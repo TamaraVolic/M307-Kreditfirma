@@ -52,7 +52,7 @@ class ValidationController
     private static function validateCreditpackage($data, &$errors)
     {
         if (!(isset($data['creditpackage']) && is_numeric($data['creditpackage']) && $data['creditpackage'] >= 0 && $data['creditpackage'] < 46)) {
-            $errors['creditpackage'] = "No such loan package";
+            $errors['creditpackage'] = "No such credit package";
         }
     }
 
@@ -79,11 +79,11 @@ class ValidationController
 
     private static function validateNames($data, &$errors)
     {
-        if (!(isset($data['name']) && preg_match(ValidationController::simpletext_regex, $data['name']))) {
-            $errors['name'] = "Name can't be empty or contain any numbers or special characters";
+        if (!(isset($data['first_name']) && preg_match(ValidationController::simpletext_regex, $data['first_name']))) {
+            $errors['first_name'] = "Name can't be empty or contain any numbers or special characters";
         }
-        if (!(isset($data['lastname']) && preg_match(ValidationController::simpletext_regex, $data['lastname']))) {
-            $errors['name'] = "Name can't be empty or contain any numbers or special characters";
+        if (!(isset($data['last_name']) && preg_match(ValidationController::simpletext_regex, $data['last_name']))) {
+            $errors['last_name'] = "Name can't be empty or contain any numbers or special characters";
         }
     }
 }

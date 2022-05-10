@@ -1,9 +1,9 @@
 <?php
 require 'app/Controllers/ValidationController.php';
-require 'app/Models/CreditPackageModel.php';
+require 'app/Models/CreditpackageModel.php';
 require 'app/Models/CreditModel.php';
 
-class EditController
+class EditCreditController
 {
 
     public function index()
@@ -12,11 +12,11 @@ class EditController
             $this->edit($_POST);
         } else {
             if (isset($_GET['id'])) {
-                $creditpackageModel = new CreditpackageModel();
-                $loanModel = new LoanModel();
-                $creditpackageData = $creditpackageModel->getAll("creditpackage");
-                $result = $loanModel->load("loan", $_GET['id']);
-                require 'app/Views/edit.view.php';
+                $creditPackageModel = new CreditpackageModel();
+                $creditModel = new CreditModel();
+                $creditPackageData = $creditPackageModel->getAll("creditpackage");
+                $result = $creditModel->load("credit", $_GET['id']);
+                require 'app/Views/editcredit.view.php';
             } else {
                 http_response_code(422);
                 echo 'Id parameter is required';
@@ -32,7 +32,7 @@ class EditController
             http_response_code(422);
             echo json_encode($validation_result);
         } else {
-            $result = LoanModel::updateLoan($_GET['id'], $data);
+            $result = CreditModel::updateCredit($_GET['id'], $data);
         }
     }
 }

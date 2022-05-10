@@ -8,16 +8,16 @@ class CreateCreditController
     public function index()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $this->create($_POST);
+            $this->createCredit($_POST);
         } else {
             $CreditPackageModel = new CreditPackageModel();
-            $creditpackageData = $CreditPackageModel->getAll("creditpackage");
+            $creditPackageData = $CreditPackageModel->getAll("creditpackage");
             require 'app/Views/createcredit.view.php';
         }
     }
 
 
-    public function create($data)
+    public function createCredit($data)
     {
         $validation_result = ValidationController::validateCreate($data);
         if (count($validation_result) > 0) {

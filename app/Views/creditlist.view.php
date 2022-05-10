@@ -53,7 +53,7 @@
                 <td><?= e($credit['payback_date']) ?></td>
                 <td><?= $credit['due'] == 0 ? '&#127774;' : '&#9889;' ?></td>
                 <td>
-                    <button onclick="window.location.href='<?= ROOT_URL ?>/edit?id=<?= $loan['credit_id'] ?>'">&#x270F;&#xFE0F;
+                    <button onclick="window.location.href='<?= ROOT_URL ?>/editcredit?id=<?= $credit['credit_id'] ?>'">&#x270F;&#xFE0F;
                         edit
                     </button>
                 </td>
