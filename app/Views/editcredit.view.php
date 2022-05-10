@@ -5,8 +5,27 @@
     <title>Edit l</title>
     <!-- Set base for relative urls to the directory of index.php: -->
     <base href="<?= ROOT_URL ?>/">
-    <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="app/index.css">
+    <script src="https://kit.fontawesome.com/3c0aa5375d.js" crossorigin="anonymous"></script>
 </head>
+
+<header>
+        <div class="header">
+            <h1 style="float: left;">Kredithay</h1>
+            <i style="float: right;" class="fa-solid fa-user fa-lg"></i>
+            
+            <nav>
+                <div class="tablecenter">
+                    <ul>
+                        <li><a href="home">Home</a></li>
+                        <li><a href="creditlist">List</a></li>
+                        <li><a href="createcredit">Create</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+</header>
+
 <body>
 <div class="container">
     <h1 class="welcome">Edit Credit</h1>
@@ -60,4 +79,7 @@
     });
 </script>
 </body>
+<footer>
+    <div class="footer"></div>
+</footer>
 </html>

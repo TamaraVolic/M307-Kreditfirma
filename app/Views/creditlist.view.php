@@ -10,19 +10,20 @@
 </head>
 
 <header>
-    <div class="header">
-        <h1>Kredithay</h1>
-        <i class="fa-solid fa-user fa-lg"></i>
-        <nav>
-            <div class="tablecenter">
-                <ul>
-                    <li><a href="home">Home</a></li>
-                    <li><a href="creditlist">List</a></li>
-                    <li><a href="createcredit">Create</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+        <div class="header">
+            <h1 style="float: left;">Kredithay</h1>
+            <i style="float: right;" class="fa-solid fa-user fa-lg"></i>
+            
+            <nav>
+                <div class="tablecenter">
+                    <ul>
+                        <li><a href="home">Home</a></li>
+                        <li><a href="creditlist">List</a></li>
+                        <li><a href="createcredit">Create</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
 </header>
 
 <body>
@@ -67,8 +68,6 @@
 <script src="public/js/app.js"></script>
 </body>
 <footer>
-    <div class="footer">
-
-    </div>
+    <div class="footer"></div>
 </footer>
 </html>
