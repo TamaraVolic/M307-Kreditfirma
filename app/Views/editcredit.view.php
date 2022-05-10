@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Edit Credit</title>
+    <title>Edit l</title>
     <!-- Set base for relative urls to the directory of index.php: -->
     <base href="<?= ROOT_URL ?>/">
     <link rel="stylesheet" href="public/css/app.css">
@@ -15,10 +15,10 @@
         <fieldset>
             <legend>Personal Information</legend>
 
-            <label for="first_name">Firstname</label>
+            <label for="name">Firstname</label>
             <input type="text" id="first_name" name="first_name" value="<?php echo e($result["first_name"]); ?>" required><br>
 
-            <label for="last_name">Lastname</label>
+            <label for="lastname">Lastname</label>
             <input type="text" id="last_name" name="last_name" value="<?php echo e($result['last_name']) ?>" required><br>
 
             <label for="email">E-Mail</label>
@@ -44,7 +44,7 @@
             <label for="checkbox">Status</label>
         </fieldset>
 
-        <button type="submit" id="submit-btn">Save Credit</button>
+        <button type="submit" id="submit-btn">Save Loan</button>
     </form>
 
     <button type="reset" onclick="location.href='<?= ROOT_URL . "/creditlist" ?>'">Cancel</button>

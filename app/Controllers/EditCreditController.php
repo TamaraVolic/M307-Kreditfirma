@@ -1,7 +1,7 @@
 <?php
-require 'app/Models/CreditPackageModel.php';
-require 'app/Models/CreditModel.php';
 require 'app/Controllers/ValidationController.php';
+require 'app/Models/CreditpackageModel.php';
+require 'app/Models/CreditModel.php';
 
 class EditCreditController
 {
@@ -9,12 +9,12 @@ class EditCreditController
     public function index()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $this->editCredit($_POST);
+            $this->edit($_POST);
         } else {
             if (isset($_GET['id'])) {
-                $CreditPackageModel = new CreditPackageModel();
+                $creditPackageModel = new CreditpackageModel();
                 $creditModel = new CreditModel();
-                $creditPackageData = $CreditPackageModel->getAll("creditpackage");
+                $creditPackageData = $creditPackageModel->getAll("creditpackage");
                 $result = $creditModel->load("credit", $_GET['id']);
                 require 'app/Views/editcredit.view.php';
             } else {
@@ -25,7 +25,7 @@ class EditCreditController
     }
 
 
-    public function editCredit($data)
+    public function edit($data)
     {
         $validation_result = ValidationController::validateEdit($data);
         if (count($validation_result) > 0) {
