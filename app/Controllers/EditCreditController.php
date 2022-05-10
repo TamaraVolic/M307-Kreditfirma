@@ -1,22 +1,22 @@
 <?php
-require 'app/Controllers/ValidationController.php';
 require 'app/Models/CreditPackageModel.php';
 require 'app/Models/CreditModel.php';
+require 'app/Controllers/ValidationController.php';
 
-class EditController
+class EditCreditController
 {
 
     public function index()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $this->edit($_POST);
+            $this->editCredit($_POST);
         } else {
             if (isset($_GET['id'])) {
-                $creditpackageModel = new CreditpackageModel();
-                $loanModel = new LoanModel();
-                $creditpackageData = $creditpackageModel->getAll("creditpackage");
-                $result = $loanModel->load("loan", $_GET['id']);
-                require 'app/Views/edit.view.php';
+                $CreditPackageModel = new CreditPackageModel();
+                $creditModel = new CreditModel();
+                $creditPackageData = $CreditPackageModel->getAll("creditpackage");
+                $result = $creditModel->load("credit", $_GET['id']);
+                require 'app/Views/editcredit.view.php';
             } else {
                 http_response_code(422);
                 echo 'Id parameter is required';
@@ -25,14 +25,14 @@ class EditController
     }
 
 
-    public function edit($data)
+    public function editCredit($data)
     {
         $validation_result = ValidationController::validateEdit($data);
         if (count($validation_result) > 0) {
             http_response_code(422);
             echo json_encode($validation_result);
         } else {
-            $result = LoanModel::updateLoan($_GET['id'], $data);
+            $result = CreditModel::updateCredit($_GET['id'], $data);
         }
     }
 }

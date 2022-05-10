@@ -2,36 +2,35 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Create loan</title>
+    <title>Edit Credit</title>
     <!-- Set base for relative urls to the directory of index.php: -->
     <base href="<?= ROOT_URL ?>/">
     <link rel="stylesheet" href="public/css/app.css">
 </head>
 <body>
 <div class="container">
-    <h1 class="welcome">Create a new loan</h1>
+    <h1 class="welcome">Edit Credit</h1>
+
     <form method="post">
         <fieldset>
             <legend>Personal Information</legend>
 
             <label for="first_name">Firstname</label>
-            <input type="text" id="first_name" name="first_name" placeholder="Firstname" required><br>
+            <input type="text" id="first_name" name="first_name" value="<?php echo e($result["first_name"]); ?>" required><br>
 
             <label for="last_name">Lastname</label>
-            <input type="text" id="last_name" name="last_name" placeholder="Lastname" required><br>
+            <input type="text" id="last_name" name="last_name" value="<?php echo e($result['last_name']) ?>" required><br>
 
             <label for="email">E-Mail</label>
-            <input type="email" id="email" name="email" placeholder="E-Mail" required><br>
+            <input type="email" id="email" name="email" value="<?php echo e($result['email']) ?>" required><br>
 
             <label for="phone_number">Phone number</label>
-            <input type="text" id="phone_number" name="phone_number" placeholder="Phone number">
+            <input type="text" id="phone_number" name="phone_number" placeholder="+41 00 000 00 00"
+                   value="<?php echo isset($result['phone_number']) ? e($result['phone_number']) : '' ?>">
         </fieldset>
 
         <fieldset>
             <legend>Credit Information</legend>
-            <label for="installments">Amount installments</label>
-            <input type="number" id="installments" name="installments" placeholder="Amount installments" min="1"
-                   max="10" value="1" required onchange="setRepaymentDate()"><br>
             <label for="creditpackage">Credit Package</label>
             <select id="creditpackage" name="creditpackage" required>
                 <?php
@@ -41,12 +40,11 @@
                 ?>
             </select>
             <br>
-
-            <label for="tbxPayday">Repayment date</label>
-            <input type="date" id="tbxPayday" name="Repayment date" placeholder="Repayment date" disabled>
+            <input type="checkbox" id="status" name="credit_status" value="1">
+            <label for="checkbox">Status</label>
         </fieldset>
 
-        <button type="submit" id="submit-btn">Create Credit</button>
+        <button type="submit" id="submit-btn">Save Credit</button>
     </form>
 
     <button type="reset" onclick="location.href='<?= ROOT_URL . "/creditlist" ?>'">Cancel</button>
@@ -57,12 +55,8 @@
 <script>
     window.addEventListener('load', () => {
         document.querySelector('form').addEventListener('submit', async e => {
-            return await submitForm(e, '<?= ROOT_URL ?>/createcredit', '<?= ROOT_URL ?>/validate?q=create', '<?php echo ROOT_URL ?>/creditlist');
+            return await submitForm(e, '<?= ROOT_URL ?>/editcredit?id=<?= $_GET['id'] ?>', '<?= ROOT_URL ?>/validate?q=edit', '<?php echo ROOT_URL ?>/creditlist');
         });
-        setRepaymentDate()
-        document.querySelector('#installments').addEventListener('onchange', () => {
-            setRepaymentDate()
-        })
     });
 </script>
 </body>
