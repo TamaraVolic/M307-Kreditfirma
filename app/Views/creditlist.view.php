@@ -5,14 +5,20 @@
     <title>Credit List</title>
     <!-- Set base for relative urls to the directory of index.php: -->
     <base href="<?= ROOT_URL ?>/">
-    <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="app/index.css">
 </head>
+<header>
+        <div class="header">
+            <h1>Kredithay</h1>
+        </div>
+    </header>
 <body>
+<div>
 <div class="container">
 
     <h1 class="welcome">Credit List</h1>
 
-    <table>
+    <table class="ths">
         <tr>
             <th>Firstname</th>
             <th>Lastname</th>
@@ -50,4 +56,9 @@
 
 <script src="public/js/app.js"></script>
 </body>
+<footer>
+    <div class="footer">
+
+    </div>
+</footer>
 </html>
