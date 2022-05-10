@@ -3,7 +3,8 @@ require 'core/bootstrap.php';
 
 $routes = [
 	'/creditlist' => 'CreditListController@index',
-	'/createcredit' => 'CreateCreditController@index'
+	'/createcredit' => 'CreateCreditController@index',
+	'/home' => 'HomeController@index'
 ];
 
 $db = [
