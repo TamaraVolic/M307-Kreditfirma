@@ -59,14 +59,11 @@
             <input type="checkbox" id="status" name="credit_status" value="1">
             <label for="checkbox">Zurückgezahlt?</label>
         </fieldset>
-
         <button type="submit" id="submit-btn">Kredit Speichern</button>
     </form>
 
     <button type="reset" onclick="location.href='<?= ROOT_URL . "/creditlist" ?>'">Abbrechen</button>
-
     </div>
-
     <script src="public/js/app.js"></script>
     <script>
         window.addEventListener('load', () => {
@@ -79,5 +76,4 @@
 <footer>
     <div class="footer"></div>
 </footer>
-
 </html>
