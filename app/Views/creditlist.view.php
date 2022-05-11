@@ -52,7 +52,7 @@
                 <td><?= e($credit['installments']) ?></td>
                 <td><?= e($credit['credit_package']) ?></td>
                 <td><?= e($credit['payback_date']) ?></td>
-                <td><?= $credit['due'] == 0 ? '&#128309;' : '&#128308;' ?></td>
+                <td><?= $credit['due'] == 0 ? '&#127774;' : '&#9889;' ?></td>
                 <td>
                     <button onclick="window.location.href='<?= ROOT_URL ?>/editcredit?id=<?= $credit['credit_id'] ?>'">&#x270F;&#xFE0F;
                         edit
