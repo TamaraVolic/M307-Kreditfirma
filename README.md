@@ -1,5 +1,30 @@
 # M307-Kreditfirma
 
+## Datenbank
+
+Krediteintrag auf der Webseite:
+
+<img src="https://media.discordapp.net/attachments/913723695967641600/973898770481819658/unknown.png">
+
+Krediteintrag in der Datenbank:
+
+<img src="https://media.discordapp.net/attachments/913723695967641600/973899379901603840/unknown.png">
+
+Datenbank Tabellen:
+
+Kredit Pakete:
+
+<img src="https://media.discordapp.net/attachments/913723695967641600/973899730637684756/unknown.png">
+
+Kredite:
+
+<img src="https://media.discordapp.net/attachments/913723695967641600/973899792633708594/unknown.png">
+
+
+Beziegung:
+
+<img src="https://media.discordapp.net/attachments/913723695967641600/973902046694608916/datenbang.png">
+
 ## Testfälle
 
 ### Testfall Nummer 1
