@@ -12,17 +12,14 @@
 
 <header>
     <div class="header">
-        <h1>Kredithay</h1>
-        <i class="fa-solid fa-user fa-lg"></i>
-        <nav>
-            <div class="tablecenter">
-                <ul>
-                    <li><a href="home">Startseite</a></li>
-                    <li><a href="creditlist">Kredit Übersicht</a></li>
-                    <li><a href="createcredit">Kredit Erstellen</a></li>
-                </ul>
-            </div>
-        </nav>
+        <h1 style=" z-index: 1;">Kredithay</h1>
+        <i style="float: right;" class="fa-solid fa-user fa-lg"></i>
+        <div class="tablecenter">
+            <li><a href="home">Home</a></li>
+            <li><a href="creditlist">Kredit Übersicht</a></li>
+            <li><a href="createcredit">Kredit Erstellen</a></li>
+            </ul>
+        </div>
     </div>
 </header>
 
