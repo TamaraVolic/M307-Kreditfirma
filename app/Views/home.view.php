@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <title>Startseite</title>
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="app/index.css">
     <script src="https://kit.fontawesome.com/3c0aa5375d.js" crossorigin="anonymous"></script>
 </head>
-
 <header>
     <div class="header">
         <h1 style=" z-index: 1;">Kredithay</h1>
@@ -23,7 +21,6 @@
         </div>
     </div>
 </header>
-
 <body>
     <div class="container">
         <div class="welcome">
@@ -41,9 +38,7 @@
     </div>
     <script src="public/js/app.js"></script>
 </body>
-
 <footer>
     <div class="footer"></div>
 </footer>
-
 </html>

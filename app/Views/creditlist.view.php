@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <title>Kredit übersicht</title>
@@ -9,21 +8,19 @@
     <link rel="stylesheet" href="app/index.css">
     <script src="https://kit.fontawesome.com/3c0aa5375d.js" crossorigin="anonymous"></script>
 </head>
-
 <header>
     <div class="header">
         <h1 style=" z-index: 1;">Kredithay</h1>
         <i style="float: right;" class="fa-solid fa-user fa-lg"></i>
         <div class="tablecenter">
             <ul>
-            <li><a href="home">Startseite</a></li>
-            <li><a href="creditlist">Kredit Übersicht</a></li>
-            <li><a href="createcredit">Kredit Erstellen</a></li>
+                <li><a href="home">Startseite</a></li>
+                <li><a href="creditlist">Kredit Übersicht</a></li>
+                <li><a href="createcredit">Kredit Erstellen</a></li>
             </ul>
         </div>
     </div>
 </header>
-
 <body>
     <div class="container">
         <h1 class="welcome">Kredit Übersicht</h1>
@@ -53,7 +50,7 @@
                 <td><?= $credit['due'] == 0 ? '&#127774;' : '&#9889;' ?></td>
                 <td>
                     <button onclick="window.location.href='<?= ROOT_URL ?>/editcredit?id=<?= $credit['credit_id'] ?>'">&#x270F;&#xFE0F;
-                        edit
+                        Bearbeiten
                     </button>
                 </td>
             </tr>
@@ -68,5 +65,4 @@
 <footer>
     <div class="footer"></div>
 </footer>
-
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <title>Kredit Erstellen</title>
@@ -9,16 +8,15 @@
     <link rel="stylesheet" href="app/index.css">
     <script src="https://kit.fontawesome.com/3c0aa5375d.js" crossorigin="anonymous"></script>
 </head>
-
 <header>
     <div class="header">
         <h1 style=" z-index: 1;">Kredithay</h1>
         <i style="float: right;" class="fa-solid fa-user fa-lg"></i>
         <div class="tablecenter">
             <ul>
-            <li><a href="home">Startseite</a></li>
-            <li><a href="creditlist">Kredit Übersicht</a></li>
-            <li><a href="createcredit">Kredit Erstellen</a></li>
+                <li><a href="home">Startseite</a></li>
+                <li><a href="creditlist">Kredit Übersicht</a></li>
+                <li><a href="createcredit">Kredit Erstellen</a></li>
             </ul>
         </div>
     </div>
@@ -67,13 +65,11 @@
             return await submitForm(e, '<?= ROOT_URL ?>/createcredit', '<?= ROOT_URL ?>/validate?q=create', '<?php echo ROOT_URL ?>/creditlist');
         });
         setRepaymentDate()
-        document.querySelector('#installments').addEventListener('onchange', () => {
-            setRepaymentDate()
             document.querySelector('#installments').addEventListener('onchange', () => {
                 setRepaymentDate()
             })
         });
-    </script>
+</script>
 </body>
 <footer>
     <div class="footer"></div>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <title>Kredit Bearbeiten</title>
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="app/index.css">
     <script src="https://kit.fontawesome.com/3c0aa5375d.js" crossorigin="anonymous"></script>
 </head>
-
 <header>
     <div class="header">
         <h1 style=" z-index: 1;">Kredithay</h1>
@@ -23,29 +21,22 @@
         </div>
     </div>
 </header>
-
 <body>
 <div class="container">
     <h1 class="welcome">Kredit Bearbeiten</h1>
-
     <form method="post">
         <fieldset>
             <legend>Persönliche Angaben</legend>
-
             <label for="name">Vorname</label>
             <input type="text" id="first_name" name="first_name" value="<?php echo e($result["first_name"]); ?>" required><br>
-
             <label for="lastname">Nachname</label>
             <input type="text" id="last_name" name="last_name" value="<?php echo e($result['last_name']) ?>" required><br>
-
                 <label for="email">E-Mail</label>
                 <input type="email" id="email" name="email" value="<?php echo e($result['email']) ?>" required><br>
-
             <label for="phone_number">Telefonnummer</label>
             <input type="text" id="phone_number" name="phone_number" placeholder="+41 00 000 00 00"
                    value="<?php echo isset($result['phone_number']) ? e($result['phone_number']) : '' ?>">
         </fieldset>
-
         <fieldset>
             <legend>Kredit Angaben</legend>
             <label for="creditpackage">Kredit Packet</label>
@@ -62,7 +53,6 @@
         </fieldset>
         <button type="submit" id="submit-btn">Kredit Speichern</button>
     </form>
-
     <button type="reset" onclick="location.href='<?= ROOT_URL . "/creditlist" ?>'">Abbrechen</button>
     </div>
     <script src="public/js/app.js"></script>
