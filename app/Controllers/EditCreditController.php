@@ -1,6 +1,6 @@
 <?php
 require 'app/Controllers/ValidationController.php';
-require 'app/Models/CreditpackageModel.php';
+require 'app/Models/CreditPackageModel.php';
 require 'app/Models/CreditModel.php';
 
 class EditCreditController

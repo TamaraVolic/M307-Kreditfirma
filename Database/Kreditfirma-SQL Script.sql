@@ -4,6 +4,12 @@ CREATE TABLE creditpackage
     name             VARCHAR(100) NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS `users` ( 
+    user_id int(11) NOT NULL, 
+    user_name varchar(50) NOT NULL, 
+    password varchar(50) NOT NULL 
+)
+
 CREATE TABLE credit
 (
     credit_id           INT AUTO_INCREMENT PRIMARY KEY,

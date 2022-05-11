@@ -6,11 +6,12 @@ $routes = [
 	'/createcredit' => 'CreateCreditController@index',
 	'/home' => 'HomeController@index',
 	'/editcredit' => 'EditCreditController@index',
-	'/validate' => 'ValidationController@index'
+	'/validate' => 'ValidationController@index',
+	'/registration' => 'RegistrationController@index'
 ];
 
 $db = [
-	'name'     => 'kredihay',
+	'name'     => 'kurseictbz_30705',
 	'username' => 'root',
 	'password' => '',
 ];

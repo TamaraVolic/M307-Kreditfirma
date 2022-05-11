@@ -2,7 +2,7 @@
 
 class ValidationController
 {
-    const email_regex = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/";
+    const email_regex = "/^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,3})$/";
     const simpletext_regex = "/^[\wöäüÖÄÜ ]+$/";
     const phone_regex = "/^[+0][\d ]+$/";
 
