@@ -15,6 +15,7 @@
         <h1 style=" z-index: 1;">Kredithay</h1>
         <i style="float: right;" class="fa-solid fa-user fa-lg"></i>
         <div class="tablecenter">
+            <ul>
             <li><a href="home">Startseite</a></li>
             <li><a href="creditlist">Kredit Übersicht</a></li>
             <li><a href="createcredit">Kredit Erstellen</a></li>
