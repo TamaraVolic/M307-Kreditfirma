@@ -10,7 +10,7 @@ $routes = [
 ];
 
 $db = [
-	'name'     => 'kredihay',
+	'name'     => 'kurseictbz_30705',
 	'username' => 'root',
 	'password' => '',
 ];

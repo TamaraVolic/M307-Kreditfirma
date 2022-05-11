@@ -1,40 +1,37 @@
 /*  Grösse von Webseite 80% */
 
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-table{
+table {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    background-color: rgb(239, 239, 239,0.5);
+    background-color: rgb(239, 239, 239, 0.5);
 }
 
-th, td{
-    background-color: rgb(239, 239, 239,0.5);
+th, td {
+    background-color: rgb(239, 239, 239, 0.5);
     border: 1px solid #cfcfcf;
 }
 
-.container{
+.container {
     position: relative;
-    top:2rem;
+    top: 2rem;
     margin: 15rem;
     background-color: white;
 }
 
-i{
+i {
     position: absolute;
     top: 3.5rem;
     right: 3rem;
     padding: 1rem;
+    z-index: 2;
 }
 
-body {
-   margin: 0; 
-}
-
-.header{
+.header {
     position: absolute;
     top: 0;
     left: 0rem;
@@ -44,8 +41,10 @@ body {
     background: #9fc5f8;
     color: white;
     font-size: 25px;
+    z-index: 0;
 }
-.footer{
+
+.footer {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -55,38 +54,48 @@ body {
     text-align: center;
 }
 
-input{
+input {
     align-items: center;
 }
 
-.tablecenter{
-    display: table;
-    margin: 0 auto;
+
+.tablecenter {
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+    display: inline-block;
+    left: 1%;
+    right: 1%;
+    top: 40%;
 }
 
-ul {
-    list-style-type: none;
-    overflow: hidden;
-}
-  
 li {
-    float: left;
+    display: inline;
 }
-  
+
 li a {
-    display: block;
+    display: inline-block;
+    padding: 10px;
     color: white;
-    text-align: center;
-    padding: 16px;
     text-decoration: none;
 }
-  
+
 li a:hover {
     background-color: #88b9fa;
     border-radius: 1rem;
 }
 
-input, select{
-    display:block; 
-    line-height:24px;
+input,
+select {
+    display: block;
+    line-height: 24px;
+}
+
+img {
+    z-index: 1;
+    position: absolute;
+    display: inline-block;
+    left: 60%;
+    right: 1%;
+    top: 15%;
 }
