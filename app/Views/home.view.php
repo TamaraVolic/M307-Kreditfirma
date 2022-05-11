@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Homepage</title>
+    <title>Startseite</title>
     <!-- Set base for relative urls to the directory of index.php: -->
     <base href="<?= ROOT_URL ?>/">
     <link rel="stylesheet" href="app/index.css">
@@ -16,9 +16,9 @@
         <nav>
             <div class="tablecenter">
                 <ul>
-                    <li><a href="home">Home</a></li>
-                    <li><a href="creditlist">List</a></li>
-                    <li><a href="createcredit">Create</a></li>
+                    <li><a href="home">Startseite</a></li>
+                    <li><a href="creditlist">Kredit Übersicht</a></li>
+                    <li><a href="createcredit">Kredit Erstellen</a></li>
                 </ul>
             </div>
         </nav>

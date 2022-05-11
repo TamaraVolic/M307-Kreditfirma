@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Credit List</title>
+    <title>Kredit übersicht</title>
     <!-- Set base for relative urls to the directory of index.php: -->
     <base href="<?= ROOT_URL ?>/">
     <link rel="stylesheet" href="app/index.css">
@@ -17,8 +17,8 @@
             <div class="tablecenter">
                 <ul>
                     <li><a href="home">Home</a></li>
-                    <li><a href="creditlist">List</a></li>
-                    <li><a href="createcredit">Create</a></li>
+                    <li><a href="creditlist">Kredit Übersicht</a></li>
+                    <li><a href="createcredit">Kredit Erstellen</a></li>
                 </ul>
             </div>
         </nav>
@@ -27,17 +27,17 @@
 
 <body>
     <div class="container">
-    <h1 class="welcome">Credit List</h1>
+    <h1 class="welcome">Kredit Übersicht</h1>
     <table class="ths">
         <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
+            <th>Vorname</th>
+            <th>Nachname</th>
             <th>E-Mail</th>
-            <th>Phone number</th>
-            <th>Installments</th>
-            <th>Credit package</th>
-            <th>Pay back until</th>
-            <th>Due</th>
+            <th>Telefonnummer</th>
+            <th>Anzahl der Raten</th>
+            <th>Kredit Paket</th>
+            <th>Rückzahldatum</th>
+            <th>Fällig</th>
             <th></th>
         </tr>
         <?php
@@ -51,7 +51,7 @@
                 <td><?= e($credit['installments']) ?></td>
                 <td><?= e($credit['credit_package']) ?></td>
                 <td><?= e($credit['payback_date']) ?></td>
-                <td><?= $credit['due'] == 0 ? '&#127774;' : '&#9889;' ?></td>
+                <td><?= $credit['due'] == 0 ? '&#128309;' : '&#128308;' ?></td>
                 <td>
                     <button onclick="window.location.href='<?= ROOT_URL ?>/editcredit?id=<?= $credit['credit_id'] ?>'">&#x270F;&#xFE0F;
                         edit
@@ -60,8 +60,8 @@
             </tr>
         <?php } ?>
     </table>
-    <button onclick="window.location.href='<?= ROOT_URL ?>/home'">&#127968; Go back home</button>
-    <button onclick="window.location.href='<?= ROOT_URL ?>/createcredit'">&#10133; Create new credit</button>
+    <button onclick="window.location.href='<?= ROOT_URL ?>/home'">&#127968; Zurück zur Startseite</button>
+    <button onclick="window.location.href='<?= ROOT_URL ?>/createcredit'">&#10133; Neuen Kredit Erstellen</button>
 </div>
 
 <script src="public/js/app.js"></script>
