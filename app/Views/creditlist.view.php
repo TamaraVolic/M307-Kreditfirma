@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <title>Kredit übersicht</title>
     <!-- Set base for relative urls to the directory of index.php: -->
     <base href="<?= ROOT_URL ?>/">
     <link rel="stylesheet" href="app/index.css">
-    <script src="https://kit.fontawesome.com/3c0aa5375d.js" crossorigin="anonymous"></script>    
+    <script src="https://kit.fontawesome.com/3c0aa5375d.js" crossorigin="anonymous"></script>
 </head>
 
 <header>
     <div class="header">
+<<<<<<< HEAD
         <h1>Kredithay</h1>
         <i class="fa-solid fa-user fa-lg"></i>
         <nav>
@@ -22,6 +24,15 @@
                 </ul>
             </div>
         </nav>
+=======
+        <h1 style=" z-index: 1;">Kredithay</h1>
+        <i style="float: right;" class="fa-solid fa-user fa-lg"></i>
+        <div class="tablecenter">
+            <li><a href="home">Home</a></li>
+            <li><a href="creditlist">List</a></li>
+            <li><a href="createcredit">Create</a></li>
+        </div>
+>>>>>>> 3b6374d0a28822270ca0c477e242e4f7ddc159ec
     </div>
 </header>
 
@@ -64,11 +75,10 @@
     <button onclick="window.location.href='<?= ROOT_URL ?>/createcredit'">&#10133; Neuen Kredit Erstellen</button>
 </div>
 
-<script src="public/js/app.js"></script>
+    <script src="public/js/app.js"></script>
 </body>
 <footer>
-    <div class="footer">
-
-    </div>
+    <div class="footer"></div>
 </footer>
+
 </html>
